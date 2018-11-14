@@ -48,7 +48,7 @@ namespace WEB.Controllers
             HttpClient client = new HttpClient();
             client.BaseAddress = new Uri("http://localhost:18080");
             client.PostAsJsonAsync<RessourceModel>("map-web/map/ressource", res).ContinueWith((e => e.Result.EnsureSuccessStatusCode()));
-            return RedirectToAction("Index");
+            return RedirectToAction("ListRessources");
         }
 
         [HttpPut]
