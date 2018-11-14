@@ -1,21 +1,21 @@
-namespace DOMAIN
-{
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
+﻿using DOMAIN;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Data.Entity.Spatial;
 
-    [Table("levio_map.ressource")]
-    public partial class ressource
+
+namespace WEB.Models
+{
+ 
+    public class RessourceModel
     {
-        public ressource()
+
+        public RessourceModel()
         {
-            applications = new HashSet<application>();
-            leaves = new HashSet<leave>();
-            mandates = new HashSet<mandate>();
-            ressource1 = new HashSet<ressource>();
-            skills = new HashSet<skill>();
+     
+            skills = new HashSet<SkillModel>();
         }
 
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
@@ -62,23 +62,11 @@ namespace DOMAIN
 
         [StringLength(255)]
         public string state { get; set; }
+        public virtual ProjectModel project { get; set; }
+        public virtual ICollection<SkillModel> skills { get; set; }
 
-        public int assigned_id { get; set; }
 
-        public int project_id { get; set; }
 
-        public virtual ICollection<application> applications { get; set; }
 
-        public virtual ICollection<leave> leaves { get; set; }
-
-        public virtual ICollection<mandate> mandates { get; set; }
-
-        public virtual project project { get; set; }
-
-        public virtual ICollection<ressource> ressource1 { get; set; }
-
-        public virtual ressource ressource2 { get; set; }
-
-        public virtual ICollection<skill> skills { get; set; }
     }
 }

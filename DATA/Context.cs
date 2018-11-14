@@ -295,10 +295,6 @@ namespace DATA
                 .IsUnicode(false);
 
             modelBuilder.Entity<ressource>()
-                .Property(e => e.username)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<ressource>()
                 .Property(e => e.contract_type)
                 .IsUnicode(false);
 
@@ -398,9 +394,7 @@ namespace DATA
                 .Property(e => e.token)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<user>()
-                .Property(e => e.username)
-                .IsUnicode(false);
+          
         }
     }
 }
