@@ -1,14 +1,15 @@
-namespace DOMAIN
-{
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
+using System.Web;
 
-    [Table("levio_map.user")]
-    public partial class user
+namespace WEB.Models
+{
+    public class UserModel
     {
+
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int id { get; set; }
 
@@ -38,7 +39,6 @@ namespace DOMAIN
 
         [StringLength(255)]
         public string token { get; set; }
-
 
     }
 }
