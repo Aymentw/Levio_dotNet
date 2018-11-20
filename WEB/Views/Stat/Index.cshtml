@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_DashboardLayout.cshtml";
+}
+
+<h2>Most Used Skills</h2>
+<table cellpadding="2" cellspacing="2" border="1">
+<tr>
+    <th>Skill</th>
+    <th>Number of resources that have this skill</th>
+</tr>
+    @foreach (var s in ViewBag.result)
+    {
+        <tr>
+            <td>@s[0]</td>
+            <td>@s[1]</td>
+        </tr>
+    }
+</table>
+
+    <label>Resource report</label><input type="text" id="resourceId" />
+<button type="button" onclick="location.href='@Url.Action("getReport", "Stat")?resourceId='+document.getElementById(&quot;resourceId&quot;).value">submit</button>
+    
+
