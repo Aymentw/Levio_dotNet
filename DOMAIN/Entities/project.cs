@@ -25,7 +25,8 @@ namespace DOMAIN
         public bool archived { get; set; }
 
         [Column(TypeName = "date")]
-        public DateTime? end_date { get; set; }
+        [DataType(DataType.Date)]
+        public DateTimeKind? end_date { get; set; }
 
         [StringLength(255)]
         public string name { get; set; }
@@ -38,7 +39,8 @@ namespace DOMAIN
         public string photo { get; set; }
 
         [Column(TypeName = "date")]
-        public DateTime? start_date { get; set; }
+        [DataType(DataType.Date)]
+        public DateTimeKind? start_date { get; set; }
 
         [StringLength(255)]
         public string type { get; set; }

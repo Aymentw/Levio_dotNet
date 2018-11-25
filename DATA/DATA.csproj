@@ -100,7 +100,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Infrastructure\desktop.ini" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
