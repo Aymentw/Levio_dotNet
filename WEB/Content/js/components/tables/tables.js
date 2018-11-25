@@ -17,7 +17,7 @@
 			]
 		});
 	});
-
+	 
 	$(function () {
 		$('#export-table').DataTable({
 			dom: 'Bfrtip',
@@ -72,7 +72,11 @@
 						className: 'btn btn-primary'
 					}
 				}
-			}
+			},
+			columnDefs: [
+			    { type: 'date-eu', targets: 0 },
+			    { type: 'date-eu', targets: 1 }
+			]
 		});
 	});
 
