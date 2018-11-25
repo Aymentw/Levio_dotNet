@@ -173,15 +173,18 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ClientController.cs" />
     <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\RequestController.cs" />
+    <Compile Include="Controllers\ProjectController.cs" />
     <Compile Include="Controllers\StatController.cs" />
     <Compile Include="Controllers\RessourceController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\ClientModel.cs" />
     <Compile Include="Models\ProjectModel.cs" />
     <Compile Include="Models\RequestModel.cs" />
     <Compile Include="Models\RessourceModel.cs" />
@@ -254,6 +257,10 @@
     <Content Include="Views\Ressource\createRessource.cshtml" />
     <Content Include="Views\Ressource\ListRessources.cshtml" />
     <Content Include="Views\Request\Index.cshtml" />
+    <Content Include="Views\Project\ListProjects.cshtml" />
+    <Content Include="Views\Project\CreateProject.cshtml" />
+    <Content Include="Views\Client\ListClients.cshtml" />
+    <Content Include="Views\Client\CreateClient.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
