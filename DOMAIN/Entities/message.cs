@@ -1,4 +1,4 @@
-namespace DOMAIN
+namespace DATA
 {
     using System;
     using System.Collections.Generic;
@@ -6,7 +6,7 @@ namespace DOMAIN
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("levio_map.message")]
+    [Table("leviomap.message")]
     public partial class message
     {
         public int id { get; set; }
@@ -26,6 +26,10 @@ namespace DOMAIN
         public string type { get; set; }
 
         public int? conversation { get; set; }
+
+        public int? from_user { get; set; }
+
+        public int? to_user { get; set; }
 
         public virtual conversation conversation1 { get; set; }
     }

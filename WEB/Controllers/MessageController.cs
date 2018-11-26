@@ -18,7 +18,7 @@ namespace WEB.Controllers
         [HttpGet]
         public ActionResult sendMessageToResource()
         {
-            return View(new MessageModel());
+            return View();
         }
     }
 }

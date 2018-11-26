@@ -1,4 +1,4 @@
-namespace DATA
+﻿namespace DATA
 {
     using System;
     using System.ComponentModel.DataAnnotations.Schema;
@@ -8,7 +8,7 @@ namespace DATA
 
     public partial class Context : DbContext
     {
-        public Context():base("Context")
+        public Context() : base("Context")
         {
         }
 
@@ -394,7 +394,7 @@ namespace DATA
                 .Property(e => e.token)
                 .IsUnicode(false);
 
-          
+
         }
     }
 }
