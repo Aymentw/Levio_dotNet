@@ -33,5 +33,34 @@ namespace WEB.Controllers
          
             return View(requestList);
         }
+
+        [HttpPost]
+        public ActionResult Delete(int id)
+        {
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri("http://localhost:18080/map-web/map/client/");
+            HttpResponseMessage response = client.GetAsync("DeleteRequest?id=" + id).Result;
+            return RedirectToAction("Index");
+
+        }
+        [HttpPost]
+        public ActionResult DeleteTreatedRequests()
+        {
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri("http://localhost:18080/map-web/map/User/");
+            HttpResponseMessage response = client.GetAsync("deleteTreatedRequets").Result;
+            return RedirectToAction("Index");
+
+        }
+
+          [HttpPost]
+        public ActionResult TreatRequest(int id)
+        {
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri("http://localhost:18080/map-web/map/User/");
+            HttpResponseMessage response = client.GetAsync("treatClientRequest?requestId="+id).Result;
+            return RedirectToAction("Index");
+
+        }
     }
 }

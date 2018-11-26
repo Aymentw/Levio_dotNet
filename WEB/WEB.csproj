@@ -258,6 +258,7 @@
     <Content Include="Content\css\animate\animate.min.css" />
     <Content Include="Content\css\bootstrap-select\bootstrap-select.css" />
     <Content Include="Content\css\bootstrap-select\bootstrap-select.min.css" />
+    <Content Include="Content\css\DataInspector.css" />
     <Content Include="Content\css\datatables\datatables.css" />
     <Content Include="Content\css\datatables\datatables.min.css" />
     <Content Include="Content\css\leaflet\leaflet.css" />
@@ -277,6 +278,8 @@
     <Content Include="Content\css\photoswipe\default-skin\preloader.gif" />
     <Content Include="Content\css\photoswipe\photoswipe.css" />
     <Content Include="Content\css\photoswipe\photoswipe.min.css" />
+    <Content Include="Content\css\request.css" />
+    <Content Include="Content\css\sweetalert2.min.css" />
     <Content Include="Content\icons\ionicons\css\ionicons.css" />
     <Content Include="Content\icons\ionicons\css\ionicons.min.css" />
     <Content Include="Content\icons\ionicons\fonts\ionicons.svg" />
@@ -472,6 +475,12 @@
     <Content Include="Content\js\dashboard\db-smarthome-dark.min.js" />
     <Content Include="Content\js\dashboard\db-smarthome.js" />
     <Content Include="Content\js\dashboard\db-smarthome.min.js" />
+    <Content Include="Content\js\DataInspector.js" />
+    <Content Include="Content\js\date-eu.js" />
+    <Content Include="Content\js\datetime-moment.js" />
+    <Content Include="Content\js\go.js" />
+    <Content Include="Content\js\jquery.popupoverlay.js" />
+    <Content Include="Content\js\moment.js" />
     <Content Include="Content\js\pages\coming-soon.js" />
     <Content Include="Content\js\pages\coming-soon.min.js" />
     <Content Include="Content\js\pages\events.js" />
@@ -480,6 +489,7 @@
     <Content Include="Content\js\pages\friends.min.js" />
     <Content Include="Content\js\pages\newsfeed.js" />
     <Content Include="Content\js\pages\newsfeed.min.js" />
+    <Content Include="Content\js\sweetalert2.min.js" />
     <Content Include="Content\vendors\css\base\bootstrap.css" />
     <Content Include="Content\vendors\css\base\bootstrap.min.css" />
     <Content Include="Content\vendors\css\base\elisyam-1.5-dark.css" />
