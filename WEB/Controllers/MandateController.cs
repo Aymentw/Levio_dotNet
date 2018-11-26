@@ -15,9 +15,10 @@ using WEB.Hubs;
 namespace WEB.Controllers
 {
     public class MandateController : Controller
-    {   
+    {
         private String url = "http://localhost:18080/map-web/map/";
         private Context c = new Context();
+
         [HttpGet]
         public ActionResult Add()
         {
@@ -32,7 +33,6 @@ namespace WEB.Controllers
             try
 
             {
-
                 var client = new RestClient(url);
 
                 var request = new RestRequest("mandate/assign", Method.POST);
@@ -76,32 +76,29 @@ namespace WEB.Controllers
             return View();
         }
 
-   
+
         [HttpPost]
         public ActionResult Delete()
         {
-
             try
 
             {
                 var routeValues = Url.RequestContext.RouteData.Values;
                 var paramName = "mandateid";
-                var id = routeValues.ContainsKey(paramName) ?
-                    routeValues[paramName] :
-                    Request.QueryString[paramName];
-                
+                var id = routeValues.ContainsKey(paramName) ? routeValues[paramName] : Request.QueryString[paramName];
+
                 var client = new RestClient(url);
 
                 var request = new RestRequest("mandate/delete", Method.POST);
                 request.AddParameter("mandateid", id, ParameterType.QueryString);
-    
+
                 request.AddHeader("Accept", "application/json");
-        
+
                 // execute the request
                 IRestResponse response = client.Execute(request);
                 var content = response.Content;
-               
-            
+
+
                 return RedirectToAction("Index");
             }
 
@@ -125,11 +122,13 @@ namespace WEB.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
+
             mandate m = c.mandates.Find(id);
             if (m == null)
             {
                 return HttpNotFound();
             }
+
             return View(m);
         }
 
@@ -139,38 +138,75 @@ namespace WEB.Controllers
             try
 
             {
-
                 var client = new RestClient(url);
 
-                var request = new RestRequest("mandate/edit", Method.PUT); 
+                var request = new RestRequest("mandate/edit", Method.PUT);
                 /* request.AddParameter("id", collection["project_id"], ParameterType.QueryString);
                  request.AddParameter("projtid", collection["project_id"], ParameterType.QueryString);
                  request.AddParameter("resid", collection["ressource_id"], ParameterType.QueryString);
                  request.AddParameter("sdate", collection["StartDate"], ParameterType.QueryString);
                  request.AddParameter("edate", collection["EndDate"], ParameterType.QueryString);
                  request.AddParameter("cost", collection["Montant"], ParameterType.QueryString);*/
-                 
-                      request.AddHeader("Content-type", "application/json");
-                      request.AddJsonBody(
-                          new
-                          {
-                              id = collection["id"],
-                              montant = collection["Montant"],
-                              startDate = collection["StartDate"],
-                              endDate = collection["EndDate"]
-                          }); // 
-                      // execute the request
-                      IRestResponse response = client.Execute(request);
-                      var content = response.Content;
-               
-                      return RedirectToAction("Index");
-                  }
-    
-                  catch
-    
-                  {
-                      return View();
-                  } 
+
+                request.AddHeader("Content-type", "application/json");
+                request.AddJsonBody(
+                    new
+                    {
+                        id = collection["id"],
+                        montant = collection["Montant"],
+                        startDate = collection["StartDate"],
+                        endDate = collection["EndDate"]
+                    }); // 
+                // execute the request
+                IRestResponse response = client.Execute(request);
+                var content = response.Content;
+
+                return RedirectToAction("Index");
+            }
+
+            catch
+
+            {
+                return View();
+            }
         }
+
+        [HttpGet]
+        public ActionResult History()
+        {
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri(url);
+            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            HttpResponseMessage response = client.GetAsync("mandate/history").Result;
+            if (response.IsSuccessStatusCode)
+            {
+                ViewBag.result = response.Content.ReadAsAsync<IEnumerable<mandate>>().Result;
+            }
+            else
+            {
+                ViewBag.result = "Error";
+            }
+
+            return View();
+        }
+        [HttpGet]
+        public ActionResult Archived()
+        {
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri(url);
+            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            HttpResponseMessage response = client.GetAsync("mandate/archive").Result;
+            if (response.IsSuccessStatusCode)
+            {
+                ViewBag.result = response.Content.ReadAsAsync<IEnumerable<mandate>>().Result;
+            }
+            else
+            {
+                ViewBag.result = "Error";
+            }
+
+            return View();
+        }
+
     }
-    }
+}
