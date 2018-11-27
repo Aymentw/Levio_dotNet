@@ -131,6 +131,20 @@ namespace WEB.Controllers
                 ViewBag.resources = "error";
 
             }
+            HttpResponseMessage projects = Client.GetAsync("map-web/map/project/projects").Result;
+            if (projects.IsSuccessStatusCode)
+            {
+
+
+                ViewBag.projects = projects.Content.ReadAsStringAsync().Result;
+
+            }
+
+            else
+            {
+                ViewBag.projects = "error";
+
+            }
 
             return View();
         }
@@ -178,6 +192,24 @@ namespace WEB.Controllers
             Client.BaseAddress = new Uri("http://localhost:18080");
             Client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
             HttpResponseMessage response = Client.GetAsync("map-web/map/dashboard/reseff/" + resourceId).Result;
+            if (response.IsSuccessStatusCode)
+            {
+                result = response.Content.ReadAsStringAsync().Result;
+            }
+            else
+            {
+                result = "error";
+            }
+            return result;
+        }
+        [HttpGet]
+        public string getProjectEff(int projectId)
+        {
+            string result;
+            HttpClient Client = new HttpClient();
+            Client.BaseAddress = new Uri("http://localhost:18080");
+            Client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+            HttpResponseMessage response = Client.GetAsync("map-web/map/dashboard/projecteff/" + projectId).Result;
             if (response.IsSuccessStatusCode)
             {
                 result = response.Content.ReadAsStringAsync().Result;

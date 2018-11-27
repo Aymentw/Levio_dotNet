@@ -3,7 +3,10 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_DashboardLayout.cshtml";
 }
-
+@section Css
+{
+<link rel="stylesheet" href=@Url.Content("/Content/css/datatables/jquery.dataTables.min.css")>
+}
 <div class="row flex-row">
     <div class="col-xl-4 col-md-4 col-sm-4">
         <div class="widget widget-12 has-shadow">
@@ -165,7 +168,7 @@
             </div>
             <div class="widget-body">
                 <div class="table-responsive">
-                    <table id="sorting-table" class="table mb-0">
+                    <table id="resourcesSort" class="table mb-0">
                         <thead>
                             <tr>
                                 <th>ID</th>
@@ -184,6 +187,33 @@
         </div>
     </div>
     </div>
+<div class="row">
+    <div class="col-xl-12">
+        <div class="widget has-shadow">
+            <div class="widget-header bordered no-actions d-flex align-items-center">
+                <h4>Sorting</h4>
+            </div>
+            <div class="widget-body">
+                <div class="table-responsive">
+                    <table id="projectsSort" class="table mb-0">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Project Status</th>
+                                <th>Start Date</th>
+                                <th>End Date</th>
+                                <th>Client</th>
+                                <th>Project Efficiency</th>
+                            </tr>
+                        </thead>
+                        <tbody id="projectsTable"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <div id="success-modal" class="modal fade">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
@@ -237,11 +267,13 @@
         <input type="text" hidden value="@ViewBag.mostprofitclient" id="mostprofitclient" />
         <input type="text" hidden value="@ViewBag.satisfactionrate" id="satisfactionrate" />
         <input type="text" hidden value="@ViewBag.resources" id="resources" />
+        <input type="text" hidden value="@ViewBag.projects" id="projects" />
         @section chartjs
 {
             <script src=@Url.Content("/Content/vendors/js/components/widgets/widgets.min.js")></script>
             <script src=@Url.Content("/Content/vendors/js/numberAnimation/jquery.animateNumber.min.js")></script>
             <script src=@Url.Content("/Content/vendors/js/noty/noty.min.js")></script>
+            <script src=@Url.Content("/Content/vendors/js/datatables/jquery.dataTables.min.js")></script>
             <script>
                 var id;
                 var firstname;
@@ -260,6 +292,20 @@
                                 '</td>'+
                            ' </tr>');
                     }
+                }
+                var projects = JSON.parse(document.getElementById('projects').value);
+                for (var i = 0; i < projects.length; i++) {
+                        $("#projectsTable").append('<tr>' +
+                                '<td><span class="text-primary">' + projects[i]["id"] + '</span></td>' +
+                                '<td>' + projects[i]["name"] + '</td>' +
+                                '<td>' + projects[i]["type"] + '</td>' +
+                                '<td>' + projects[i]["start_date"] + '</td>' +
+                                '<td>' + projects[i]["end_date"] + '</td>' +
+                                '<td>' + projects[i]["client"]["name"] + '</td>' +
+                                '<td class="td-actions">' +
+                                    '<button type="button" class="btn btn-success calculEff" data-value="' + projects[i]["id"] + '">Calculate</button><p id="result' + projects[i]["id"] +'"></p>' +
+                                '</td>' +
+                           ' </tr>');
                 }
                 var items = JSON.parse(document.getElementById('skills').value);
                 var labels = [];
@@ -396,6 +442,31 @@
                         }
                     });
                 });
+                $(".calculEff").click(function () {
+                    var button = $(this);
+                    var projId = $(this).attr("data-value");
+                    $.ajax({
+                        type: 'GET',
+                        url: 'http://localhost:20664/Stat/getProjectEff?projectId=' + projId,
+                        dataType: 'json',
+                        success: function (d) {
+                            if(d==="NaN"){
+                                $("#result" + projId).html(d);
+                            }
+                            else {
+                                $("#result" + projId).html(Math.round(d) + "%");
+                                if((Math.round(d)>=100)){
+                                    $("#result" + projId).addClass("text-green");   
+                                }
+                                else {
+                                    $("#result" + projId).addClass("text-red");
+                                }
+                            }
+                            button.hide();
+                            console.log(d);
+                        }
+                    });
+                });
                 $("#generateReport").click(function () {
                     $.ajax({
                         type: 'GET',
@@ -415,7 +486,10 @@
                         }
                     });
                 });
-
+                $(document).ready(function () {
+                    $('#resourcesSort').DataTable();
+                    $('#projectsSort').DataTable();
+                });
             </script>
         }
 
