@@ -787,6 +787,7 @@
 <script src=@Url.Content("/Content/vendors/js/base/core.min.js")></script>
 <!-- End Vendor Js -->
 <!-- Begin Page Vendor Js -->
+<script src=@Url.Content("/Content/vendors/js/datatables/datatables.min.js")></script>
 <script src=@Url.Content("/Content/vendors/js/nicescroll/nicescroll.min.js")></script>
 <script src=@Url.Content("/Content/vendors/js/chart/chart.min.js")></script>
 <script src=@Url.Content("/Content/vendors/js/progress/circle-progress.min.js")></script>
@@ -797,6 +798,8 @@
 <!-- End Page Vendor Js -->
 <!-- Begin Page Snippets -->
 <script src=@Url.Content("/Content/js/dashboard/db-default.js")></script>
+<script src=@Url.Content("/Content/js/components/tables/tables.js")></script>
 <!-- End Page Snippets -->
+    @RenderSection("chartjs", required: false)
 </body>
 </html>

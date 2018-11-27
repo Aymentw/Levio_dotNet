@@ -223,3 +223,10 @@ __pycache__/
 # Windows thumbnail cache files
 Thumbs.db
 *.csproj
+DATA/packages.config
+DATA/packages.config
+DATA/packages.config
+DOMAIN/packages.config
+SERVICE/packages.config
+*.config
+WEB/WEB.csproj
