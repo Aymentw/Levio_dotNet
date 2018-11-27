@@ -119,5 +119,27 @@ namespace WEB.Controllers
 
             return RedirectToAction("ViewMessages","Message");
         }
+
+        [HttpGet]
+        public ActionResult deleteMessage(int id)
+        {
+            MySqlCommand cmd = dbConn.CreateCommand();
+            cmd.CommandText = "Delete from message where id = @id";
+            cmd.Parameters.AddWithValue("@id", id);
+            try
+            {
+                dbConn.Open();
+            }
+            catch (Exception erro)
+            {
+                Console.WriteLine(erro);
+
+
+            }
+            cmd.ExecuteNonQuery();
+
+            return RedirectToAction("ViewMessages", "Message");
+
+        }
     }
 }

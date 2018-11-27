@@ -108,16 +108,11 @@
                                                             <ul class="list-inline pt-3">
                                                                 <li class="list-inline-item mr-3">
                                                                     <a href="javascript:void(0)">
-                                                                        <i class="la la-mail-forward la-2x"></i>
-                                                                    </a>
-                                                                </li>
-                                                                <li class="list-inline-item mr-3">
-                                                                    <a href="javascript:void(0)">
                                                                         <i class="la la-print la-2x"></i>
                                                                     </a>
                                                                 </li>
                                                                 <li class="list-inline-item mr-3">
-                                                                    <a href="javascript:void(0)">
+                                                                    <a href="@Url.Action("deleteMessage","Message", new {id = @m.messageId})">
                                                                         <i class="la la-trash la-2x"></i>
                                                                     </a>
                                                                 </li>
@@ -176,8 +171,9 @@
     <script src="../../Content/vendors/js/photoswipe/photoswipe-ui-default.min.js"></script>
 <script src="../../Content/vendors/js/app/app.min.js"></script>
 <script src="../../Content/js/app/mail/mail.min.js"></script>
-<script src="../../Content/js/app/mail/mail.js"></script>
-    
+    <script src="../../Content/js/app/mail/mail.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+<script src="~/Content/vendors/js/html2canvas.min.js"></script>
     <script>
         $(document).ready(function () {
             $('.btn.btn-gradient-01').on('click',
@@ -203,6 +199,22 @@
                         }
                 });
                 });
+
+            function print() {
+                var filename = 'conversation.pdf';
+
+                html2canvas(document.querySelector('.tab-content')).then(canvas => {
+                    var pdf = new jsPDF('p', 'mm', 'a1');
+                    pdf.addImage(canvas.toDataURL('image/jpg'), 'jpg', 0, 0, 500, 650);
+                    pdf.save(filename);
+                });
+            }
+
+            $('.la.la-print.la-2x').on('click',
+                function() {
+                    print();
+                });
+
         });
     </script>
 }
