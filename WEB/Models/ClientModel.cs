@@ -1,5 +1,6 @@
 namespace WEB.Models
 {
+    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
@@ -13,8 +14,10 @@ namespace WEB.Models
         public ClientModel()
         {
         }
-
         
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int id { get; set; }
+
         [Column(TypeName = "bit")]
         public bool archived { get; set; }
         
@@ -26,6 +29,12 @@ namespace WEB.Models
 
         [StringLength(255)]
         public string type { get; set; }
-        
+
+        public String adress { get; set; }
+
+        public decimal latitude { get; set; }
+
+        public decimal longitude { get; set; }
+
     }
 }
