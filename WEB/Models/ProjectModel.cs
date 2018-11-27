@@ -1,7 +1,6 @@
 ﻿namespace WEB.Models
 {
     using DOMAIN;
-    using Newtonsoft.Json;
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
@@ -39,7 +38,6 @@
         [StringLength(255)]
         public string type { get; set; }
 
-        [JsonIgnore]
         public int? client_id { get; set; }
 
         public virtual client client { get; set; }
