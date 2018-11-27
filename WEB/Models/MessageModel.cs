@@ -29,6 +29,10 @@ namespace WEB.Models
 
         public int? conversation { get; set; }
 
+        public int? from_user { get; set; }
+
+        public int? to_user { get; set; }
+
         public virtual ConversationModel conversation1 { get; set; }
     }
 }

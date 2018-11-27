@@ -26,10 +26,6 @@ namespace WEB.Models
         [StringLength(255)]
         public string state { get; set; }
 
-        public int? from_user { get; set; }
-
-        public int? to_user { get; set; }
-
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<MessageModel> messages { get; set; }
     }
