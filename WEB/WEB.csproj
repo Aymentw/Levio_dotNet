@@ -52,32 +52,12 @@
       <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.0.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.0.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.0.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Microsoft.AI.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.0.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.AI.WindowsServer, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.0.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.ApplicationInsights, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ApplicationInsights.2.0.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+    <Reference Include="Microsoft.AspNet.SignalR.Core, Version=2.4.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.SignalR.Core.2.4.0\lib\net45\Microsoft.AspNet.SignalR.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -93,12 +73,11 @@
       <HintPath>..\packages\MySql.Data.Entity.6.8.8\lib\net45\MySql.Data.Entity.EF6.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="RestSharp, Version=106.5.4.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.106.5.4\lib\net452\RestSharp.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Net" />
@@ -109,42 +88,19 @@
     </Reference>
     <Reference Include="System.Net.Http.Primitives, Version=4.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Net.Http.Formatting.Extension.5.2.3.0\lib\System.Net.Http.Primitives.dll</HintPath>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.Formatting.Extension.5.2.3.0\lib\System.Net.Http.Formatting.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.IO.Compression" />
-    <Reference Include="System.Net.Http.Formatting, Version=1.0.5.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\WinInsider.System.Net.Http.Formatting.1.0.5\lib\netstandard1.1\System.Net.Http.Formatting.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="System.Numerics" />
-    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Web.DynamicData" />
-    <Reference Include="System.Web.Entity" />
-    <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
-    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web.Abstractions" />
     <Reference Include="System.Web.Routing" />
-    <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
-    <Reference Include="System.Web.Services" />
-    <Reference Include="System.EnterpriseServices" />
-    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
-    </Reference>
     <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
@@ -152,29 +108,13 @@
     <Reference Include="System.Web.Optimization">
       <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
     </Reference>
-    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
-    </Reference>
     <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
     </Reference>
-    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
-    </Reference>
     <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
-    </Reference>
-    <Reference Include="WebGrease">
-      <Private>True</Private>
-      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
-    </Reference>
-    <Reference Include="Antlr3.Runtime">
-      <Private>True</Private>
-      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -183,38 +123,381 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ClientController.cs" />
     <Compile Include="Controllers\DashboardController.cs" />
+    <Compile Include="Controllers\Error404Controller.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\MessageController.cs" />
+    <Compile Include="Controllers\RequestController.cs" />
     <Compile Include="Controllers\ProjectController.cs" />
     <Compile Include="Controllers\StatController.cs" />
     <Compile Include="Controllers\RessourceController.cs" />
+    <Compile Include="Controllers\MandateController.cs" />
+    <Compile Include="Controllers\MapController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Hubs\NotificationHub.cs" />
+    <Compile Include="Models\ConversationModel.cs" />
+    <Compile Include="Models\MessageModel.cs" />
+    <Compile Include="Models\MessageViewModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
     <Compile Include="Models\ClientModel.cs" />
     <Compile Include="Models\ProjectModel.cs" />
+    <Compile Include="Models\RequestModel.cs" />
     <Compile Include="Models\RessourceModel.cs" />
     <Compile Include="Models\SkillModel.cs" />
     <Compile Include="Models\UserModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\alertifyjs\alertify.css" />
+    <Content Include="Content\alertifyjs\alertify.min.css" />
+    <Content Include="Content\alertifyjs\alertify.rtl.css" />
+    <Content Include="Content\alertifyjs\alertify.rtl.min.css" />
+    <Content Include="Content\alertifyjs\themes\bootstrap.css" />
+    <Content Include="Content\alertifyjs\themes\bootstrap.min.css" />
+    <Content Include="Content\alertifyjs\themes\bootstrap.rtl.css" />
+    <Content Include="Content\alertifyjs\themes\bootstrap.rtl.min.css" />
+    <Content Include="Content\alertifyjs\themes\default.css" />
+    <Content Include="Content\alertifyjs\themes\default.min.css" />
+    <Content Include="Content\alertifyjs\themes\default.rtl.css" />
+    <Content Include="Content\alertifyjs\themes\default.rtl.min.css" />
+    <Content Include="Content\alertifyjs\themes\semantic.css" />
+    <Content Include="Content\alertifyjs\themes\semantic.min.css" />
+    <Content Include="Content\alertifyjs\themes\semantic.rtl.css" />
+    <Content Include="Content\alertifyjs\themes\semantic.rtl.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\css\animate\animate.css" />
+    <Content Include="Content\css\animate\animate.min.css" />
+    <Content Include="Content\css\bootstrap-select\bootstrap-select.css" />
+    <Content Include="Content\css\bootstrap-select\bootstrap-select.min.css" />
+    <Content Include="Content\css\DataInspector.css" />
+    <Content Include="Content\css\datatables\datatables.css" />
+    <Content Include="Content\css\datatables\datatables.min.css" />
+    <Content Include="Content\css\leaflet\leaflet.css" />
+    <Content Include="Content\css\leaflet\leaflet.min.css" />
+    <Content Include="Content\css\lity\lity.css" />
+    <Content Include="Content\css\lity\lity.min.css" />
+    <Content Include="Content\css\owl-carousel\ajax-loader.gif" />
+    <Content Include="Content\css\owl-carousel\owl.carousel.css" />
+    <Content Include="Content\css\owl-carousel\owl.carousel.min.css" />
+    <Content Include="Content\css\owl-carousel\owl.theme.css" />
+    <Content Include="Content\css\owl-carousel\owl.theme.min.css" />
+    <Content Include="Content\css\owl-carousel\owl.video.play.png" />
+    <Content Include="Content\css\photoswipe\default-skin\default-skin.css" />
+    <Content Include="Content\css\photoswipe\default-skin\default-skin.min.css" />
+    <Content Include="Content\css\photoswipe\default-skin\default-skin.png" />
+    <Content Include="Content\css\photoswipe\default-skin\default-skin.svg" />
+    <Content Include="Content\css\photoswipe\default-skin\preloader.gif" />
+    <Content Include="Content\css\photoswipe\photoswipe.css" />
+    <Content Include="Content\css\photoswipe\photoswipe.min.css" />
+    <Content Include="Content\css\request.css" />
+    <Content Include="Content\css\sweetalert2.min.css" />
+    <Content Include="Content\icons\ionicons\css\ionicons.css" />
+    <Content Include="Content\icons\ionicons\css\ionicons.min.css" />
+    <Content Include="Content\icons\ionicons\fonts\ionicons.svg" />
+    <Content Include="Content\icons\lineawesome\css\line-awesome-font-awesome.css" />
+    <Content Include="Content\icons\lineawesome\css\line-awesome-font-awesome.min.css" />
+    <Content Include="Content\icons\lineawesome\css\line-awesome.css" />
+    <Content Include="Content\icons\lineawesome\css\line-awesome.min.css" />
+    <Content Include="Content\icons\lineawesome\fonts\line-awesome.svg" />
+    <Content Include="Content\icons\meteocons\css\meteocons.css" />
+    <Content Include="Content\icons\meteocons\css\meteocons.min.css" />
+    <Content Include="Content\icons\meteocons\fonts\Meteocons.svg" />
+    <Content Include="Content\icons\themify\css\themify-icons.css" />
+    <Content Include="Content\icons\themify\css\themify-icons.min.css" />
+    <Content Include="Content\icons\themify\fonts\themify.svg" />
+    <Content Include="Content\img\albums\01.jpg" />
+    <Content Include="Content\img\albums\02.jpg" />
+    <Content Include="Content\img\albums\03.jpg" />
+    <Content Include="Content\img\albums\04.jpg" />
+    <Content Include="Content\img\albums\05.jpg" />
+    <Content Include="Content\img\albums\06.jpg" />
+    <Content Include="Content\img\albums\07.jpg" />
+    <Content Include="Content\img\albums\08.jpg" />
+    <Content Include="Content\img\apple-touch-icon.png" />
+    <Content Include="Content\img\avatar\avatar-01-big.jpg" />
+    <Content Include="Content\img\avatar\avatar-01.jpg" />
+    <Content Include="Content\img\avatar\avatar-02-big.jpg" />
+    <Content Include="Content\img\avatar\avatar-02.jpg" />
+    <Content Include="Content\img\avatar\avatar-03-big.jpg" />
+    <Content Include="Content\img\avatar\avatar-03.jpg" />
+    <Content Include="Content\img\avatar\avatar-04-big.jpg" />
+    <Content Include="Content\img\avatar\avatar-04.jpg" />
+    <Content Include="Content\img\avatar\avatar-05-big.jpg" />
+    <Content Include="Content\img\avatar\avatar-05.jpg" />
+    <Content Include="Content\img\avatar\avatar-06-big.jpg" />
+    <Content Include="Content\img\avatar\avatar-06.jpg" />
+    <Content Include="Content\img\avatar\avatar-07-big.jpg" />
+    <Content Include="Content\img\avatar\avatar-07.jpg" />
+    <Content Include="Content\img\avatar\avatar-08-big.jpg" />
+    <Content Include="Content\img\avatar\avatar-08.jpg" />
+    <Content Include="Content\img\avatar\avatar-09-big.jpg" />
+    <Content Include="Content\img\avatar\avatar-09.jpg" />
+    <Content Include="Content\img\background\01.jpg" />
+    <Content Include="Content\img\background\02.jpg" />
+    <Content Include="Content\img\background\03.jpg" />
+    <Content Include="Content\img\background\04.jpg" />
+    <Content Include="Content\img\background\05.jpg" />
+    <Content Include="Content\img\background\06.jpg" />
+    <Content Include="Content\img\background\07.jpg" />
+    <Content Include="Content\img\background\08.jpg" />
+    <Content Include="Content\img\background\db-smarthome-dark.jpg" />
+    <Content Include="Content\img\background\db-smarthome.jpg" />
+    <Content Include="Content\img\blog\blog-01.jpg" />
+    <Content Include="Content\img\clouds.png" />
+    <Content Include="Content\img\cover\01.jpg" />
+    <Content Include="Content\img\cover\02.jpg" />
+    <Content Include="Content\img\cover\03.jpg" />
+    <Content Include="Content\img\cover\04.jpg" />
+    <Content Include="Content\img\cover\05.jpg" />
+    <Content Include="Content\img\cover\06.jpg" />
+    <Content Include="Content\img\cover\07.jpg" />
+    <Content Include="Content\img\cover\08.jpg" />
+    <Content Include="Content\img\dashboards\db-compact-dark.jpg" />
+    <Content Include="Content\img\dashboards\db-compact.jpg" />
+    <Content Include="Content\img\dashboards\db-default-dark.jpg" />
+    <Content Include="Content\img\dashboards\db-default.jpg" />
+    <Content Include="Content\img\dashboards\db-modern-dark.jpg" />
+    <Content Include="Content\img\dashboards\db-modern.jpg" />
+    <Content Include="Content\img\dashboards\db-smarthome-dark.jpg" />
+    <Content Include="Content\img\dashboards\db-smarthome.jpg" />
+    <Content Include="Content\img\dashboards\db-social-dark.jpg" />
+    <Content Include="Content\img\dashboards\db-social.jpg" />
+    <Content Include="Content\img\email\01.jpg" />
+    <Content Include="Content\img\email\02.jpg" />
+    <Content Include="Content\img\email\03.png" />
+    <Content Include="Content\img\email\04.png" />
+    <Content Include="Content\img\email\05.png" />
+    <Content Include="Content\img\email\06.png" />
+    <Content Include="Content\img\email\ico-facebook.png" />
+    <Content Include="Content\img\email\ico-linkedin.png" />
+    <Content Include="Content\img\email\ico-twitter.png" />
+    <Content Include="Content\img\favicon-16x16.png" />
+    <Content Include="Content\img\favicon-32x32.png" />
+    <Content Include="Content\img\favicon.ico" />
+    <Content Include="Content\img\group\01.jpg" />
+    <Content Include="Content\img\group\02.jpg" />
+    <Content Include="Content\img\group\03.jpg" />
+    <Content Include="Content\img\group\04.jpg" />
+    <Content Include="Content\img\group\05.jpg" />
+    <Content Include="Content\img\group\06.jpg" />
+    <Content Include="Content\img\icone-01-white.png" />
+    <Content Include="Content\img\icone-01.png" />
+    <Content Include="Content\img\icone-02-white.png" />
+    <Content Include="Content\img\icone-02.png" />
+    <Content Include="Content\img\icone-03-white.png" />
+    <Content Include="Content\img\icone-03.png" />
+    <Content Include="Content\img\icone-04-white.png" />
+    <Content Include="Content\img\icone-04.png" />
+    <Content Include="Content\img\logo-2.png" />
+    <Content Include="Content\img\logo-big-2.png" />
+    <Content Include="Content\img\logo-big.png" />
+    <Content Include="Content\img\logo.png" />
+    <Content Include="Content\img\music\01.jpg" />
+    <Content Include="Content\img\music\02.jpg" />
+    <Content Include="Content\img\music\03.jpg" />
+    <Content Include="Content\img\notifications\01.jpg" />
+    <Content Include="Content\img\plugins\leaflet\custom-marker-shadow.png" />
+    <Content Include="Content\img\plugins\leaflet\custom-marker.png" />
+    <Content Include="Content\img\plugins\leaflet\layers-2x.png" />
+    <Content Include="Content\img\plugins\leaflet\layers.png" />
+    <Content Include="Content\img\plugins\leaflet\marker-icon-2x.png" />
+    <Content Include="Content\img\plugins\leaflet\marker-icon.png" />
+    <Content Include="Content\img\plugins\leaflet\marker-shadow.png" />
+    <Content Include="Content\img\smarthome\01.jpg" />
+    <Content Include="Content\img\smarthome\02.jpg" />
+    <Content Include="Content\img\smarthome\03.jpg" />
+    <Content Include="Content\img\smarthome\04.jpg" />
+    <Content Include="Content\img\smarthome\05.jpg" />
+    <Content Include="Content\img\smarthome\06.jpg" />
+    <Content Include="Content\img\smarthome\07.jpg" />
+    <Content Include="Content\img\smarthome\08.jpg" />
+    <Content Include="Content\img\smarthome\09.jpg" />
+    <Content Include="Content\img\smarthome\10.jpg" />
+    <Content Include="Content\img\smarthome\11.jpg" />
+    <Content Include="Content\img\smarthome\12.jpg" />
+    <Content Include="Content\img\smarthome\13.jpg" />
+    <Content Include="Content\img\smarthome\14.jpg" />
+    <Content Include="Content\img\smarthome\15.jpg" />
+    <Content Include="Content\img\smarthome\16.jpg" />
+    <Content Include="Content\img\smarthome\17.jpg" />
+    <Content Include="Content\img\smarthome\18.jpg" />
+    <Content Include="Content\img\smarthome\19.jpg" />
+    <Content Include="Content\img\videos\01.jpg" />
+    <Content Include="Content\img\videos\02.jpg" />
+    <Content Include="Content\img\videos\03.jpg" />
+    <Content Include="Content\img\videos\04.jpg" />
+    <Content Include="Content\img\videos\05.jpg" />
+    <Content Include="Content\img\videos\06.jpg" />
+    <Content Include="Content\img\videos\07.jpg" />
+    <Content Include="Content\img\videos\08.jpg" />
+    <Content Include="Content\img\videos\09.jpg" />
+    <Content Include="Content\js\app\calendar\basic-calendar.js" />
+    <Content Include="Content\js\app\calendar\basic-calendar.min.js" />
+    <Content Include="Content\js\app\calendar\event-calendar.js" />
+    <Content Include="Content\js\app\calendar\event-calendar.min.js" />
+    <Content Include="Content\js\app\calendar\list-calendar.js" />
+    <Content Include="Content\js\app\calendar\list-calendar.min.js" />
+    <Content Include="Content\js\app\chat\chat.js" />
+    <Content Include="Content\js\app\chat\chat.min.js" />
+    <Content Include="Content\js\app\contact\contact.js" />
+    <Content Include="Content\js\app\contact\contact.min.js" />
+    <Content Include="Content\js\app\mail\mail.js" />
+    <Content Include="Content\js\app\mail\mail.min.js" />
+    <Content Include="Content\js\components\chartjs\chartjs.js" />
+    <Content Include="Content\js\components\chartjs\chartjs.min.js" />
+    <Content Include="Content\js\components\datepicker\datepicker.js" />
+    <Content Include="Content\js\components\leaflet\maps-leaflet.js" />
+    <Content Include="Content\js\components\leaflet\maps-leaflet.min.js" />
+    <Content Include="Content\js\components\music\music-player.js" />
+    <Content Include="Content\js\components\music\music-player.min.js" />
+    <Content Include="Content\js\components\notifications\notifications.js" />
+    <Content Include="Content\js\components\notifications\notifications.min.js" />
+    <Content Include="Content\js\components\scrollable\scrollable.js" />
+    <Content Include="Content\js\components\scrollable\scrollable.min.js" />
+    <Content Include="Content\js\components\tabledit\tabledit.js" />
+    <Content Include="Content\js\components\tables\tables.js" />
+    <Content Include="Content\js\components\tabs\animated-tabs.js" />
+    <Content Include="Content\js\components\tabs\animated-tabs.min.js" />
+    <Content Include="Content\js\components\validation\validation.js" />
+    <Content Include="Content\js\components\validation\validation.min.js" />
+    <Content Include="Content\js\components\widgets\widgets-dark.js" />
+    <Content Include="Content\js\components\widgets\widgets-dark.min.js" />
+    <Content Include="Content\js\components\widgets\widgets.js" />
+    <Content Include="Content\js\components\widgets\widgets.min.js" />
+    <Content Include="Content\js\components\wizard\form-wizard.js" />
+    <Content Include="Content\js\components\wizard\form-wizard.min.js" />
+    <Content Include="Content\js\dashboard\db-clean-dark.js" />
+    <Content Include="Content\js\dashboard\db-clean-dark.min.js" />
+    <Content Include="Content\js\dashboard\db-clean.js" />
+    <Content Include="Content\js\dashboard\db-clean.min.js" />
+    <Content Include="Content\js\dashboard\db-compact-dark.js" />
+    <Content Include="Content\js\dashboard\db-compact-dark.min.js" />
+    <Content Include="Content\js\dashboard\db-compact.js" />
+    <Content Include="Content\js\dashboard\db-compact.min.js" />
+    <Content Include="Content\js\dashboard\db-default-dark.js" />
+    <Content Include="Content\js\dashboard\db-default-dark.min.js" />
+    <Content Include="Content\js\dashboard\db-default.js" />
+    <Content Include="Content\js\dashboard\db-default.min.js" />
+    <Content Include="Content\js\dashboard\db-modern-dark.js" />
+    <Content Include="Content\js\dashboard\db-modern-dark.min.js" />
+    <Content Include="Content\js\dashboard\db-modern.js" />
+    <Content Include="Content\js\dashboard\db-modern.min.js" />
+    <Content Include="Content\js\dashboard\db-smarthome-dark.js" />
+    <Content Include="Content\js\dashboard\db-smarthome-dark.min.js" />
+    <Content Include="Content\js\dashboard\db-smarthome.js" />
+    <Content Include="Content\js\dashboard\db-smarthome.min.js" />
+    <Content Include="Content\js\DataInspector.js" />
+    <Content Include="Content\js\date-eu.js" />
+    <Content Include="Content\js\datetime-moment.js" />
+    <Content Include="Content\js\go.js" />
+    <Content Include="Content\js\jquery.popupoverlay.js" />
+    <Content Include="Content\js\moment.js" />
+    <Content Include="Content\js\pages\coming-soon.js" />
+    <Content Include="Content\js\pages\coming-soon.min.js" />
+    <Content Include="Content\js\pages\events.js" />
+    <Content Include="Content\js\pages\events.min.js" />
+    <Content Include="Content\js\pages\friends.js" />
+    <Content Include="Content\js\pages\friends.min.js" />
+    <Content Include="Content\js\pages\newsfeed.js" />
+    <Content Include="Content\js\pages\newsfeed.min.js" />
+    <Content Include="Content\js\sweetalert2.min.js" />
+    <Content Include="Content\vendors\css\base\bootstrap.css" />
+    <Content Include="Content\vendors\css\base\bootstrap.min.css" />
+    <Content Include="Content\vendors\css\base\elisyam-1.5-dark.css" />
+    <Content Include="Content\vendors\css\base\elisyam-1.5-dark.min.css" />
+    <Content Include="Content\vendors\css\base\elisyam-1.5.css" />
+    <Content Include="Content\vendors\css\base\elisyam-1.5.min.css" />
+    <Content Include="Content\vendors\js\app\app.js" />
+    <Content Include="Content\vendors\js\app\app.min.js" />
+    <Content Include="Content\vendors\js\base\core.js" />
+    <Content Include="Content\vendors\js\base\core.min.js" />
+    <Content Include="Content\vendors\js\base\jquery.min.js" />
+    <Content Include="Content\vendors\js\base\jquery.ui.min.js" />
+    <Content Include="Content\vendors\js\bootstrap-select\bootstrap-select.js" />
+    <Content Include="Content\vendors\js\bootstrap-select\bootstrap-select.min.js" />
+    <Content Include="Content\vendors\js\bootstrap-wizard\bootstrap.wizard.js" />
+    <Content Include="Content\vendors\js\bootstrap-wizard\bootstrap.wizard.min.js" />
+    <Content Include="Content\vendors\js\calendar\fullcalendar.js" />
+    <Content Include="Content\vendors\js\calendar\fullcalendar.min.js" />
+    <Content Include="Content\vendors\js\calendar\moment.min.js" />
+    <Content Include="Content\vendors\js\chart\chart.js" />
+    <Content Include="Content\vendors\js\chart\chart.min.js" />
+    <Content Include="Content\vendors\js\countdown\countdown.js" />
+    <Content Include="Content\vendors\js\countdown\countdown.min.js" />
+    <Content Include="Content\vendors\js\datatables\buttons.bootstrap4.js" />
+    <Content Include="Content\vendors\js\datatables\buttons.bootstrap4.min.js" />
+    <Content Include="Content\vendors\js\datatables\buttons.colVis.js" />
+    <Content Include="Content\vendors\js\datatables\buttons.colVis.min.js" />
+    <Content Include="Content\vendors\js\datatables\buttons.flash.js" />
+    <Content Include="Content\vendors\js\datatables\buttons.flash.min.js" />
+    <Content Include="Content\vendors\js\datatables\buttons.html5.js" />
+    <Content Include="Content\vendors\js\datatables\buttons.html5.min.js" />
+    <Content Include="Content\vendors\js\datatables\buttons.print.js" />
+    <Content Include="Content\vendors\js\datatables\buttons.print.min.js" />
+    <Content Include="Content\vendors\js\datatables\dataTables.buttons.js" />
+    <Content Include="Content\vendors\js\datatables\dataTables.buttons.min.js" />
+    <Content Include="Content\vendors\js\datatables\datatables.js" />
+    <Content Include="Content\vendors\js\datatables\datatables.min.js" />
+    <Content Include="Content\vendors\js\datatables\jszip.js" />
+    <Content Include="Content\vendors\js\datatables\jszip.min.js" />
+    <Content Include="Content\vendors\js\datatables\pdfmake.js" />
+    <Content Include="Content\vendors\js\datatables\pdfmake.min.js" />
+    <Content Include="Content\vendors\js\datatables\vfs_fonts.js" />
+    <Content Include="Content\vendors\js\datepicker\daterangepicker.js" />
+    <Content Include="Content\vendors\js\datepicker\moment.min.js" />
+    <Content Include="Content\vendors\js\html2canvas.min.js" />
+    <Content Include="Content\vendors\js\leaflet\leaflet.js" />
+    <Content Include="Content\vendors\js\leaflet\leaflet.min.js" />
+    <Content Include="Content\vendors\js\lity\lity.js" />
+    <Content Include="Content\vendors\js\lity\lity.min.js" />
+    <Content Include="Content\vendors\js\nicescroll\nicescroll.js" />
+    <Content Include="Content\vendors\js\nicescroll\nicescroll.min.js" />
+    <Content Include="Content\vendors\js\noty\noty.js" />
+    <Content Include="Content\vendors\js\noty\noty.min.js" />
+    <Content Include="Content\vendors\js\owl-carousel\owl.carousel.js" />
+    <Content Include="Content\vendors\js\owl-carousel\owl.carousel.min.js" />
+    <Content Include="Content\vendors\js\photoswipe\photoswipe-ui-default.js" />
+    <Content Include="Content\vendors\js\photoswipe\photoswipe-ui-default.min.js" />
+    <Content Include="Content\vendors\js\photoswipe\photoswipe.js" />
+    <Content Include="Content\vendors\js\photoswipe\photoswipe.min.js" />
+    <Content Include="Content\vendors\js\progress\circle-progress.js" />
+    <Content Include="Content\vendors\js\progress\circle-progress.min.js" />
+    <Content Include="Content\vendors\js\tabledit\jquery.tabledit.js" />
+    <Content Include="Content\vendors\js\tabledit\jquery.tabledit.min.js" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
+    <Content Include="Scripts\alertify.js" />
+    <Content Include="Scripts\alertify.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\icons\ionicons\fonts\ionicons.eot" />
+    <Content Include="Content\icons\ionicons\fonts\ionicons.ttf" />
+    <Content Include="Content\icons\ionicons\fonts\ionicons.woff" />
+    <Content Include="Content\icons\lineawesome\fonts\line-awesome.eot" />
+    <Content Include="Content\icons\lineawesome\fonts\line-awesome.ttf" />
+    <Content Include="Content\icons\lineawesome\fonts\line-awesome.woff" />
+    <Content Include="Content\icons\lineawesome\fonts\line-awesome.woff2" />
+    <Content Include="Content\icons\meteocons\fonts\Meteocons.ttf" />
+    <Content Include="Content\icons\meteocons\fonts\Meteocons.woff" />
+    <Content Include="Content\icons\themify\fonts\themify.eot" />
+    <Content Include="Content\icons\themify\fonts\themify.ttf" />
+    <Content Include="Content\icons\themify\fonts\themify.woff" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.signalR-2.4.0.js" />
+    <Content Include="Scripts\jquery.signalR-2.4.0.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -223,9 +506,13 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Views\Map\Index.cshtml" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -241,9 +528,16 @@
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\Shared\_DashboardLayout.cshtml" />
     <Content Include="Views\Dashboard\Index.cshtml" />
+    <Content Include="Views\Mandate\Index.cshtml" />
+    <Content Include="Views\Mandate\Add.cshtml" />
+    <Content Include="Views\Mandate\Delete.cshtml" />
+    <Content Include="Views\Mandate\Edit.cshtml" />
+    <Content Include="Views\Error404\Error404.cshtml" />
+    <Content Include="Views\Mandate\EditMandate.cshtml" />
     <Content Include="Views\Stat\Index.cshtml" />
     <Content Include="Views\Ressource\createRessource.cshtml" />
     <Content Include="Views\Ressource\ListRessources.cshtml" />
+    <Content Include="Views\Request\Index.cshtml" />
     <Content Include="Views\Project\ListProjects.cshtml" />
     <Content Include="Views\Project\CreateProject.cshtml" />
     <Content Include="Views\Client\ListClients.cshtml" />
@@ -262,28 +556,32 @@
     <Folder Include="Content\ProjectImages\" />
     <Folder Include="Content\vendors\" />
     <Folder Include="Properties\" />
+    <Content Include="Views\Mandate\History.cshtml" />
+    <Content Include="Views\Mandate\Archived.cshtml" />
+    <Content Include="Views\Message\viewMessages.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
     <Folder Include="Views\MostUsedSkills\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="packages.config" />
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DATA\DATA.csproj">
+      <Project>{6426DD76-11FC-45B0-A736-32E3E8434DC1}</Project>
+      <Name>DATA</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DOMAIN\DOMAIN.csproj">
       <Project>{887f18e4-f73f-4ff3-b50e-9c5785fcbdd6}</Project>
       <Name>DOMAIN</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SERVICEPATERN\SERVICEPATERN.csproj">
-      <Project>{97179f25-d4be-467c-b727-9e887636ea03}</Project>
-      <Name>SERVICEPATERN</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SERVICE\SERVICE.csproj">
-      <Project>{59a12cc5-b00d-45d3-b7fd-5bf2b5c46916}</Project>
-      <Name>SERVICE</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

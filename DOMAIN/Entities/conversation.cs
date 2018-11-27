@@ -1,12 +1,11 @@
-namespace DOMAIN
+namespace DATA
 {
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
 
-    [Table("levio_map.conversation")]
+    [Table("leviomap.conversation")]
     public partial class conversation
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -23,10 +22,6 @@ namespace DOMAIN
 
         [StringLength(255)]
         public string state { get; set; }
-
-        public int? from_user { get; set; }
-
-        public int? to_user { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<message> messages { get; set; }
