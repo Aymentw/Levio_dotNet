@@ -274,7 +274,6 @@
                                 'Email has been sent! ',
                                 'success'
                             );
-                            alert("already sent");
                         }
                     });
                     $.ajax({
@@ -283,7 +282,21 @@
                         data: "from=" + 2 + "&to=" + substitute + "&conversationId=" + conversationId + "&subject=" + subject + "&msgBody="+message,
                         cache: false,
                         success: function(e) {
-                            window.location.reload(true);
+                            new Noty({
+                                type: 'notification',
+                                layout: 'centerRight',
+                                text: 'Email Has Been Sent Successfully!',
+                                closeWith: ['click', 'button'],
+                                animation: {
+                                    open: 'animated bounceInRight', // Animate.css class names
+                                    close: 'animated bounceOutRight' // Animate.css class names
+                                }
+                            }).show();
+
+                            for (var i = 0; i <= 90000; i += 2) {
+                                i -= 1;
+                            }
+                            window.location.reload();
                         }
                 });
                 });
