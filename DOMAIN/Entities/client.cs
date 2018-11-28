@@ -57,6 +57,12 @@ namespace DOMAIN
         [StringLength(255)]
         public string type { get; set; }
 
+        public String adress { get; set; }
+
+        public float latitude { get; set; }
+
+        public float longitude { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<project> projects { get; set; }
 
