@@ -156,6 +156,29 @@ namespace WEB.Controllers
             return View(listeRequest);
         }
 
+
+
+        [HttpGet]
+        public ActionResult deleteClientRequest(int id)
+        {
+            MySqlCommand cmd1 = dbConn.CreateCommand();
+            cmd1.CommandText = "delete from client_request where clients_id = 2 and requests_id = @id ";
+            cmd1.Parameters.AddWithValue("@id", id);
+            try
+            {
+                dbConn.Open();
+            }
+            catch (Exception erro)
+            {
+                Console.WriteLine(erro);
+            }
+
+            cmd1.ExecuteNonQuery();
+            cmd1.CommandText = "delete from request where id = @id";
+            cmd1.ExecuteNonQuery();
+            return RedirectToAction("viewClientRequests");
+        }
+
     }
 
 }

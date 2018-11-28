@@ -4,7 +4,12 @@
     ViewBag.Title = "AddClientRequest";
     Layout = "~/Views/Shared/_DashboardLayout.cshtml";
 }
-
+@section Css
+{
+    <link href="~/Content/css/sweetalert2.min.css" rel="stylesheet" />
+<link href="~/Content/vendors/css/base/elisyam-1.5.min.css" rel="stylesheet" />
+<link href="~/Content/css/animate/animate.min.css" rel="stylesheet" />
+}
 <div class="container-fluid">
     <!-- Begin Page Header-->
     <div class="row">
@@ -85,6 +90,16 @@
     <!-- End Row -->
 @section JavaScript
 {
+    <script src="../../Content/vendors/js/noty/noty.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.2.2/js/dataTables.buttons.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
+    <script type="text/javascript" src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js"></script>
+    <script type="text/javascript" src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.html5.min.js"></script>
+    <script src="~/Content/js/sweetalert2.min.js"></script>
+
     <script>
         $(document).ready(function () {
             $('.btn.btn-gradient-01').on('click',
@@ -100,8 +115,22 @@
                         data: "resource=" + resource + "&project=" + project + "&projectDate=" + projectDate,
                         cache: false,
                         success: function(e) {
-                            alert("sent");
-                           
+                            new Noty({
+                                type: 'success',
+                                layout: 'topRight',
+                                text: 'Request Has Been Sent Successfully',
+                                progressBar: true,
+                                timeout: 2500,
+                                animation: {
+                                    open: 'animated bounceInRight', // Animate.css class names
+                                    close: 'animated bounceOutRight' // Animate.css class names
+                                }
+                            }).show();
+                            for (var i = 0; i < 1000; i+=2) {
+                                i -= 1;
+                            }
+                            window.location.href = '@Url.Action("viewClientRequests", "Request")';
+
                         }
 
                     });

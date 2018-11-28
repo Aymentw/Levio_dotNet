@@ -114,14 +114,14 @@
                 }).then((result) => {
                     if (result.value) {
                             $.ajax({
-                                type: 'post',
-                                url: '@Url.Action("Delete","Request")',
+                                type: 'get',
+                                url: '@Url.Action("deleteClientRequest", "Request")',
                                 data: 'id=' + id,
                                 cache: false,
                                 success: function (e) {
                                     currentElement.remove();
                                     new Noty({
-                                        type: 'success',
+                                        type: 'warning',
                                         layout: 'topRight',
                                         text: 'Request Has Been Deleted Successfully',
                                         progressBar: true,
@@ -131,10 +131,10 @@
                                             close: 'animated bounceOutRight' // Animate.css class names
                                         }
                                     }).show();
-                                     sleep(4000).then(() => {
-                                         window.location.reload();
-
-                                     });
+                                    for (var i = 0; i < 10000; i += 2) {
+                                        i -= 1;
+                                    }
+                                    window.location.reload();
 
                                     /*   swalWithBootstrapButtons(
                                            'Deleted!',

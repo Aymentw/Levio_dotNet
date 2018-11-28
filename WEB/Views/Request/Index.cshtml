@@ -139,11 +139,10 @@
                                             close: 'animated bounceOutRight' // Animate.css class names
                                         }
                                     }).show();
-                                     sleep(4000).then(() => {
-                                         window.location.reload();
-
-                                     });
-                                    
+                                    for (var i = 0; i < 1000; i += 2) {
+                                        i -= 1;
+                                    }
+                                    window.location.reload();
                                     /*   swalWithBootstrapButtons(
                                            'Deleted!',
                                            'Request has been deleted! ',
