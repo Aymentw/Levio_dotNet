@@ -4,7 +4,6 @@ namespace DOMAIN
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
 
     [Table("levio_map.client")]
     public partial class client
@@ -57,6 +56,12 @@ namespace DOMAIN
 
         [StringLength(255)]
         public string type { get; set; }
+
+        public String adress { get; set; }
+
+        public float latitude { get; set; }
+
+        public float longitude { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<project> projects { get; set; }
