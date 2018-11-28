@@ -37,7 +37,7 @@ namespace WEB.Controllers
                               "r.last_name resource_lastName, r.email resource_email from message m inner join conversation c " +
                               "on (m.conversation = c.id)  inner join client cl on (m.from_user = cl.id or m.to_user = cl.id) " +
                               "inner join ressource r on (r.id = m.from_user or r.id = m.to_user) where c.state = @state and (m.from_user = @id " +
-                              "or m.to_user = @id ) group by m.subject, m.id";
+                              "or m.to_user = @id ) group by m.conversation, m.subject, m.id";
             cmd.Parameters.AddWithValue("@id", 2);
             cmd.Parameters.AddWithValue("@state", "open");
             try
