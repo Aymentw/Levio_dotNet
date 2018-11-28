@@ -633,6 +633,9 @@
     <Content Include="Views\Mandate\History.cshtml" />
     <Content Include="Views\Mandate\Archived.cshtml" />
     <Content Include="Views\Message\sendMessageToResource.cshtml" />
+    <Content Include="Views\Message\viewMessages.cshtml" />
+    <Content Include="Views\Request\AddClientRequest.cshtml" />
+    <Content Include="Views\Request\viewClientRequests.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -263,6 +263,21 @@
             <li>
                 <a href="@Url.Action("Index","Request")">Manage Requests</a>
             </li>
+            <li>
+                <a href="@Url.Action("AddClientRequest","Request")">Add Request (Client)</a>
+            </li>
+
+        </ul>
+    </li>
+    
+    <li>
+        <a href="#dropdown-messages" aria-expanded="false" data-toggle="collapse">
+            <i class="la la-envelope"></i><span>Messages</span>
+        </a>
+        <ul id="dropdown-messages" class="collapse list-unstyled pt-0">
+            <li>
+                <a href="@Url.Action("ViewMessages","Message")">Manage Messages</a>
+            </li>
             
         </ul>
     </li>

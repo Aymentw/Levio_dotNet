@@ -1,16 +1,17 @@
-﻿@model IEnumerable<WEB.Models.RequestModel>
+﻿@model List<WEB.Models.RequestModel>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "viewClientRequests";
     Layout = "~/Views/Shared/_DashboardLayout.cshtml";
 }
+
 
 @section Css
 {
     <link href="~/Content/alertifyjs/alertify.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" />
     <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.5.1/css/buttons.dataTables.min.css" />
-<link href="~/Content/css/request.css" rel="stylesheet" />
+    <link href="~/Content/css/request.css" rel="stylesheet" />
     <link href="~/Content/css/sweetalert2.min.css" rel="stylesheet" />
     <link href="~/Content/vendors/css/base/elisyam-1.5.min.css" rel="stylesheet" />
     <link href="~/Content/css/animate/animate.min.css" rel="stylesheet" />
@@ -28,7 +29,7 @@
             </div>
             <div class="widget-body">
                 <div class="table-responsive">
-                    <table id="exportable"class="table table-hover mb-0">
+                    <table id="exportable" class="table table-hover mb-0">
                         <thead>
                             <tr>
                                 <th>Subject</th>
@@ -65,16 +66,7 @@
                                         <td>@Html.DisplayFor(modelItem => item.status)</td>
 
                                     }
-                                    <td class="td-actions">
-                                        @if (currentStatus)
-                                        {
-                                            <a><i class="la la-close delete disabled" data-value="@item.id"></i></a>
-
-                                        }
-                                        else
-                                        {   <a><i class="la la-check edit" data-value="@item.id"></i></a>
-
-                                        }
+                                    <td class="td-actions">                                      
                                         <a><i class="la la-trash delete" data-value="@item.id"></i></a>
                                     </td>
                                 </tr>
@@ -143,7 +135,7 @@
                                          window.location.reload();
 
                                      });
-                                    
+
                                     /*   swalWithBootstrapButtons(
                                            'Deleted!',
                                            'Request has been deleted! ',
@@ -175,23 +167,6 @@
                     }
                 });
             });
-        $('.la.la-check.edit').on('click',
-            function () {
-                var currentRow = $(this).parent().parent().parent();
-                var id = $(this).attr('data-value');
-                var currentElement = $(this);
-                $.ajax({
-                    type: 'post',
-                    url: '@Url.Action("TreatRequest", "Request")', 
-                    data: 'id='+ id,
-                    cache: false, 
-                    success: function(e) {
-                        currentElement.attr('class', 'la la-close delete');
-                        currentRow.children('td:eq(3)').html("<span style='width: 100px;'><span class='badge-text badge-text-small danger'>Closed</span></span>");
-                    }
-                });
-            });
-
 
         $('#exportable').DataTable({
             dom: 'Bfrtip',
